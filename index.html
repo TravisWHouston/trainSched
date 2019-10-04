@@ -66,20 +66,38 @@
             </div>
             <div class="form-group row">
               <label for="first-time">First Train Time</label>
-                <input class="form-control" id="first-time" type="text">
+                <input class="form-control" id="first-time" type="number">
             </div>
             <div class="form-group row">
               <label for="frequency">Frequency (min)</label>
-                <input class="form-control" id="frequency" type="text">
+                <input class="form-control" id="frequency" type="number">
             </div>
+            <button class="btn btn-default" id="add-train" type="submit">Submit</button>
           </form>
         </div>
       </div>
     </div>
 </container>
 
-
+<script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-app.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-<script src="./assets/javascript/app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-firestore.js"></script>
+<script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: `AIzaSyB803jBACKinh6fGkRoxAJoyoju_hOLn3c`,
+      authDomain: `trainsched-c00cc.firebaseapp.com`,
+      databaseURL: `https://trainsched-c00cc.firebaseio.com`,
+      projectId: `trainsched-c00cc`,
+      storageBucket: ``,
+      messagingSenderId: `985726035836`,
+      appId: `1:985726035836:web:3da80b18beb6a407e9e6f9`,
+      measurementId: `G-54E5CXPS2Y`
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig)
+  </script>
+  <script src="./assets/javascript/app.js"></script>
 </body>
 </html>
